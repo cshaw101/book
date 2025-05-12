@@ -1,5 +1,7 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Schoolbell&family=Creepster&display=swap');
 
-
+/* Root Container */
 .App {
   display: flex;
   flex-direction: column;
@@ -10,6 +12,7 @@
   min-height: 100vh;
 }
 
+/* Logo Styles */
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -17,12 +20,47 @@
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #f97316aa);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #facc15aa);
 }
 
+/* Card Styles */
+.card {
+  @apply p-4 rounded-lg shadow-md bg-white;
+}
+
+/* Read the Docs Text */
+.read-the-docs {
+  @apply text-gray-500;
+}
+
+/* Page Container */
+.page {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Text Shadow */
+.text-shadow-lg {
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
+}
+
+/* Parchment Background */
+.parchment {
+  background: rgba(255, 245, 200, 0.85);
+  border: 2px solid #d4a017;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  max-width: 80%;
+  text-align: center;
+}
+
+/* Logo Spin Animation */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,12 +74,4 @@
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

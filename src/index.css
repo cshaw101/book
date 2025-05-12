@@ -1,6 +1,8 @@
+/* Import TailwindCSS and Google Fonts */
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Schoolbell&family=Creepster&display=swap');
 
+/* Root Container */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -10,9 +12,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f0f0f0;
+  background: linear-gradient(to bottom right, #1a202c, #2d3748, #4a5568); /* Dark gradient background */
+  color: black; /* Light text for contrast */
 }
 
+/* Logo Styles */
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -26,14 +30,17 @@
   filter: drop-shadow(0 0 2em #facc15aa);
 }
 
+/* Card Styles */
 .card {
   @apply p-4 rounded-lg shadow-md bg-white;
 }
 
+/* Read the Docs Text */
 .read-the-docs {
   @apply text-gray-500;
 }
 
+/* Page Container */
 .page {
   height: 100%;
   display: flex;
@@ -41,10 +48,12 @@
   justify-content: center;
 }
 
+/* Text Shadow */
 .text-shadow-lg {
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
 }
 
+/* Parchment Background */
 .parchment {
   background: rgba(255, 245, 200, 0.85);
   border: 2px solid #d4a017;
@@ -55,6 +64,7 @@
   text-align: center;
 }
 
+/* Logo Spin Animation */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -63,8 +73,25 @@
     transform: rotate(360deg);
   }
 }
+
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+    flex-direction: column;
+  }
+
+  .logo {
+    height: 4em;
+  }
+
+  .card {
+    width: 100%;
   }
 }

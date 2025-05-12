@@ -15,7 +15,7 @@ const Book = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-800">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-black text-white">
       {/* Centered container for the book and buttons */}
       <div className="flex flex-col items-center justify-center p-6">
         {/* Flipbook component */}
@@ -47,16 +47,16 @@ const Book = () => {
           </HTMLFlipBook>
         </div>
         {/* Navigation buttons */}
-        <div className="flex space-x-4 mt-4">
+        <div className="flex space-x-4 mt-8">
           <button
             onClick={handlePrevPage}
-            className="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600"
+            className="px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold rounded-full shadow-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105"
           >
             Previous
           </button>
           <button
             onClick={handleNextPage}
-            className="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600"
+            className="px-6 py-3 bg-gradient-to-r from-green-500 to-blue-500 text-white font-bold rounded-full shadow-lg hover:from-green-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
           >
             Next
           </button>
