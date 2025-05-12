@@ -123,6 +123,7 @@ export const pages = [
   {
     content: (
       <div className="w-full h-full flex flex-col items-center justify-center text-center text-gray-800 font-annie-use-your-telescope">
+        <p className="text-3xl">It's 3!</p>
         <p className="text-3xl">The skeletons play music on their knees!</p>
       </div>
     ),
@@ -139,6 +140,7 @@ export const pages = [
   {
     content: (
       <div className="w-full h-full flex flex-col items-center justify-center text-center text-gray-800 font-annie-use-your-telescope">
+        <p className="text-3xl">It's 4!</p>
         <p className="text-3xl">The ghosts glide to the dance floor.</p>
       </div>
     ),
@@ -155,7 +157,8 @@ export const pages = [
   {
     content: (
       <div className="w-full h-full flex flex-col items-center justify-center text-center text-gray-800 font-annie-use-your-telescope">
-        <p className="text-3xl">The monsters start to jive!</p>
+        <p className="text-3xl">It's 5!</p>
+        <p className="text-3xl"> The monsters start to jive!</p>
       </div>
     ),
     image: jiving,
@@ -205,6 +208,7 @@ export const pages = [
   {
     content: (
       <div className="w-full h-full flex flex-col items-center justify-center text-center text-gray-800 font-annie-use-your-telescope">
+        <p className="text-3xl">It's 8!</p>
         <p className="text-3xl">The vampires cut the cobweb cake!</p>
         <p className="text-3xl mt-2">"Gooey red velvet, my favorite!"</p>
       </div>
@@ -240,6 +244,7 @@ export const pages = [
   {
     content: (
       <div className="w-full h-full flex flex-col items-center justify-center text-center text-gray-800 font-annie-use-your-telescope">
+        <p className="text-3xl">It's 10!</p>
         <p className="text-3xl">The monsters want to dance again!</p>
       </div>
     ),
@@ -255,14 +260,6 @@ export const pages = [
   },
   {
     content: (
-      <div className="w-full h-full flex flex-col items-center justify-center text-center text-gray-800 font-annie-use-your-telescope">
-        <h1 className="text-5xl font-bold">HAPPY HALLOWEEN</h1>
-      </div>
-    ),
-    image: ending,
-  },
-  {
-    content: (
       <div className="w-full h-full flex items-center justify-center text-center text-gray-800 font-annie-use-your-telescope text-2xl">
         {/* Empty content for blank page */}
       </div>
@@ -272,6 +269,8 @@ export const pages = [
   {
     content: (
       <div className="w-full h-full flex flex-col items-center justify-center text-center text-gray-800 font-annie-use-your-telescope">
+        <p className="text-3xl">It's 11!</p>
+        <p className="text-3xl">Mummy asks a question!</p>
         <p className="text-3xl">"Is anyone else getting sleepy?"</p>
       </div>
     ),
