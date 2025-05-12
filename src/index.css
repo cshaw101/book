@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+#root, .App {
+  height: 100%;
+  margin: 0;;
+}
+
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #f97316aa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #facc15aa);
+}
+
+.card {
+  @apply p-4 rounded-lg shadow-md bg-white;
+}
+
+.read-the-docs {
+  @apply text-gray-500;
+}
+.page {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-content {
+  position: relative;
+  z-index: 10;
+  color: white;  /* Ensure text is readable */
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background for readability */
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
