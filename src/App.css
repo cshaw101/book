@@ -15,6 +15,14 @@
   min-height: 100vh;
 }
 
+/* Ensure the App container aligns content to the top on mobile */
+@media (max-width: 768px) {
+  .App {
+    justify-content: flex-start;
+    min-height: calc(100vh - 60px);
+  }
+}
+
 /* Logo Styles */
 .logo {
   height: 6em;
