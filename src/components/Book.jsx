@@ -19,32 +19,31 @@ const Book = () => {
       {/* Centered container for the book */}
       <div className="relative p-6 bg-gradient-to-r from-yellow-100 via-pink-100 to-purple-100 rounded-xl shadow-lg border-8 border-yellow-300 flex justify-center items-center">
         {/* Flipbook component */}
-       <HTMLFlipBook
-  width={400}
-  height={500}
-  size="fixed"
-  minWidth={300}
-  maxWidth={500}
-  minHeight={400}
-  maxHeight={700}
-  maxShadowOpacity={0.5}
-  showCover={true}
-  mobileScrollSupport={false}
-  flippingTime={1000}
-  usePortrait={true}
-  startPage={0}
-  drawShadow={true}
-  ref={bookRef}
-  className="shadow-2xl"
->
-  {pages.map((page, index) => (
-    <div key={index} className="page">
-      <Page content={page.content} image={page.image} />
-    </div>
-  ))}
-</HTMLFlipBook>
-
-
+        <HTMLFlipBook
+          width={400}
+          height={500}
+          size="fixed"
+          minWidth={300}
+          maxWidth={500}
+          minHeight={400}
+          maxHeight={700}
+          maxShadowOpacity={0.7}
+          showCover={true}
+          mobileScrollSupport={false}
+          flippingTime={1000}
+          usePortrait={true}
+          startPage={0}
+          drawShadow={true}
+          ref={bookRef}
+          className="shadow-2xl"
+          style={{ background: 'rgba(255, 245, 200, 0.3)' }} // Subtle page texture
+        >
+          {pages.map((page, index) => (
+            <div key={index} className="page">
+              <Page content={page.content} image={page.image} />
+            </div>
+          ))}
+        </HTMLFlipBook>
       </div>
       {/* Navigation buttons */}
       <div className="mb-4 flex space-x-4 mt-4">
