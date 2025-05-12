@@ -14,10 +14,15 @@ const Book = () => {
       const isMobileView = window.innerWidth <= 768;
       setIsMobile(isMobileView);
 
-      // Adjusted aspect ratio for taller images
-      const aspectRatio = 3 / 5; // Standard aspect ratio for images
+      // Adjusted aspect ratio for taller images on mobile
+      const aspectRatio = isMobileView ? 3 / 6 : 3 / 5; // Taller on mobile (0.5 vs 0.6)
       let width = window.innerWidth;
       let height = window.innerHeight;
+
+      // Account for the black bar height on mobile (e.g., 60px)
+      if (isMobileView) {
+        height -= 60; // Reserve space for the fixed black bar
+      }
 
       // Ensure the full width is visible while maximizing height
       if (width / height > aspectRatio) {
@@ -29,7 +34,7 @@ const Book = () => {
       }
 
       // Adjust height slightly to make images taller without cutting width
-      height = Math.min(height, window.innerHeight * 0.95); // Use 95% of viewport height
+      height = Math.min(height, (isMobileView ? window.innerHeight - 60 : window.innerHeight) * 0.95);
       setBookSize({ width, height });
     };
 
@@ -59,16 +64,17 @@ const Book = () => {
   };
 
   return (
-    <div
-      className={`flex items-center justify-center ${
-        isMobile ? 'w-screen h-screen' : 'min-h-screen'
-      } bg-gradient-to-br from-gray-900 via-purple-900 to-black text-white`}
-    >
-      <div className="flex items-center justify-center w-full h-full">
+    <div className="flex flex-col items-center justify-start w-screen h-screen bg-black text-white m-0 p-0 overflow-hidden">
+      {/* Book Container */}
+      <div
+        className={`flex items-center justify-center w-full ${
+          isMobile ? 'h-[calc(100vh-60px)]' : 'h-full'
+        } m-0 p-0`}
+      >
         <HTMLFlipBook
-          width={bookSize.width} // Dynamically calculated width
-          height={bookSize.height} // Dynamically calculated height
-          size="fixed" // Fixed size for better control
+          width={bookSize.width}
+          height={bookSize.height}
+          size="fixed"
           minWidth={300}
           maxWidth={500}
           minHeight={400}
@@ -77,13 +83,15 @@ const Book = () => {
           showCover={true}
           mobileScrollSupport={false}
           flippingTime={1000}
-          usePortrait={isMobile} // Single-page view on mobile
+          usePortrait={isMobile}
           startPage={0}
           drawShadow={true}
           ref={bookRef}
           className="shadow-2xl"
           style={{
             background: 'rgba(255, 245, 200, 0.3)',
+            margin: 0,
+            padding: 0,
           }}
         >
           {pages.map((page, index) => (
@@ -96,27 +104,28 @@ const Book = () => {
               }}
             >
               <Page content={page.content} image={page.image} />
-              {/* Navigation arrows for mobile */}
-              {isMobile && (
-                <>
-                  <button
-                    onClick={handlePrevPage}
-                    className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white rounded-full p-2 hover:bg-gray-700"
-                  >
-                    &#8592;
-                  </button>
-                  <button
-                    onClick={handleNextPage}
-                    className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white rounded-full p-2 hover:bg-gray-700"
-                  >
-                    &#8594;
-                  </button>
-                </>
-              )}
             </div>
           ))}
         </HTMLFlipBook>
       </div>
+
+      {/* Fixed Black Bar for Navigation Buttons on Mobile */}
+      {isMobile && (
+        <div className="fixed bottom-0 left-0 w-full h-[60px] bg-black flex items-center justify-between px-4">
+          <button
+            onClick={handlePrevPage}
+            className="bg-gray-800 bg-opacity-50 text-white rounded-full p-2 hover:bg-gray-700"
+          >
+            ←
+          </button>
+          <button
+            onClick={handleNextPage}
+            className="bg-gray-800 bg-opacity-50 text-white rounded-full p-2 hover:bg-gray-700"
+          >
+            →
+          </button>
+        </div>
+      )}
     </div>
   );
 };

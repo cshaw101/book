@@ -5,6 +5,9 @@
 @tailwind utilities;
 
 /* Root Container */
+html {
+  background-color: black;
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -14,7 +17,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom right, #1a202c, #2d3748, #4a5568); /* Dark gradient background */
+  background: black; /* Dark gradient background */
   color: black; /* Light text for contrast */
 }
 
