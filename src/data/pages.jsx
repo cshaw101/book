@@ -16,11 +16,25 @@ import dancing1 from '../assets/illustrations/dancing1.png';
 import gettingtired from '../assets/illustrations/gettingtired.png';
 import readyforbed from '../assets/illustrations/readyforbed.png';
 import sleepingMonsters from '../assets/illustrations/sleepingMonsters.png';
+import bonus3 from '../assets/illustrations/bonus3.png';
+import zombies2 from '../assets/illustrations/zombies2.png';
+import witch2 from '../assets/illustrations/witch2.png';
+import skeletons2 from '../assets/illustrations/skeletons2.png';
+import dancingghosts from '../assets/illustrations/dancingghosts.png';
+import jiving2 from '../assets/illustrations/jiving2.png';
+import goblinsscary from '../assets/illustrations/goblinsscary.png';
+import storm from '../assets/illustrations/storm.png';
+import cake3 from '../assets/illustrations/cake3.png';
+import werewolves2 from '../assets/illustrations/werewolves2.png';
+import party from '../assets/illustrations/party.png';
+import happy from '../assets/illustrations/happy.png';
+import sleeping from '../assets/illustrations/sleeping.png';
 
 export const pages = [
+  
   {
     content: (
-      <div className="page-content w-full h-full flex items-center justify-center text-center text-4xl font-chewy text-white">
+      <div className="w-full h-full flex items-center justify-center text-center text-4xl font-comic-neue text-white text-shadow-lg">
         By Page Hill
       </div>
     ),
@@ -28,7 +42,7 @@ export const pages = [
   },
   {
     content: (
-      <div className="page-content w-full h-full flex flex-col items-center justify-center text-center text-white">
+      <div className="w-full h-full flex flex-col items-center justify-center text-center text-white font-comic-neue">
         <h1 className="text-3xl">The Monster's Halloween Party</h1>
         <p className="mt-4 italic text-2xl">To my baby niece! I love you so much!</p>
         <p className="mt-8 border-b-2 border-gray-400 w-1/2 mx-auto"></p>
@@ -36,9 +50,18 @@ export const pages = [
     ),
     image: dedication,
   },
+   // Blank page before dedication
   {
     content: (
-      <div className="page-content w-full h-full flex flex-col items-center justify-center text-center text-white">
+      <div className="w-full h-full flex items-center justify-center text-center text-white font-comic-neue text-2xl">
+        {/* Empty content for blank page */}
+      </div>
+    ),
+    image: bonus3,
+  },
+  {
+    content: (
+      <div className="w-full h-full flex flex-col items-center justify-center text-center text-white font-comic-neue">
         <h1 className="text-3xl">The Monster's Halloween Party</h1>
         <p className="mt-4 italic text-2xl">
           The bats come out!<br />
@@ -55,43 +78,67 @@ export const pages = [
   },
   {
     content: (
-      <div className="page-content w-full h-full flex flex-col items-center justify-center text-center text-white">
+      <div className="w-full h-full flex flex-col items-center justify-center text-center text-white font-comic-neue">
         <p className="text-2xl">It's Midnight! It's Halloween!</p>
         <p className="text-2xl">The banshee is so excited-</p>
         <p className="text-3xl font-bold">HE SCREAMS</p>
       </div>
     ),
-   image: banshees,
+    image: banshees,
   },
   {
     content: (
-      <div className="page-content w-full h-full flex flex-col items-center justify-center text-center text-white">
+      <div className="w-full h-full flex flex-col items-center justify-center text-center text-white font-comic-neue">
         <p className="text-2xl">It's 1!</p>
         <p className="text-2xl">The zombies climb from the dirt for fun!</p>
       </div>
     ),
     image: zombies1,
   },
+   {
+    content: (
+      <div className="w-full h-full flex items-center justify-center text-center text-white font-comic-neue text-2xl">
+        {/* Empty content for blank page */}
+      </div>
+    ),
+    image: zombies2,
+  },
   {
     content: (
-      <div className="page-content w-full h-full flex flex-col items-center justify-center text-center text-white">
+      <div className="w-full h-full flex flex-col items-center justify-center text-center text-white font-comic-neue">
         <p className="text-2xl">It's 2!</p>
         <p className="text-2xl">The witches bring a pot of bubbling brew!</p>
       </div>
     ),
     image: witch1,
   },
+   {
+    content: (
+      <div className="w-full h-full flex items-center justify-center text-center text-white font-comic-neue text-2xl">
+        {/* Empty content for blank page */}
+      </div>
+    ),
+    image: witch2,
+  },
   {
     content: (
-      <div className="page-content w-full h-full flex flex-col items-center justify-center text-center text-white">
+      <div className="w-full h-full flex flex-col items-center justify-center text-center text-white font-comic-neue">
         <p className="text-2xl">The skeletons play music on their knees!</p>
       </div>
     ),
     image: skeletons1,
   },
+   {
+    content: (
+      <div className="w-full h-full flex items-center justify-center text-center text-white font-comic-neue text-2xl">
+        {/* Empty content for blank page */}
+      </div>
+    ),
+    image: skeletons2
+  },
   {
     content: (
-      <div className="page-content w-full h-full flex flex-col items-center justify-center text-center text-white">
+      <div className="w-full h-full flex flex-col items-center justify-center text-center text-white font-comic-neue">
         <p className="text-2xl">The ghosts glide to the dance floor.</p>
       </div>
     ),
@@ -99,15 +146,31 @@ export const pages = [
   },
   {
     content: (
-      <div className="page-content w-full h-full flex flex-col items-center justify-center text-center text-white">
+      <div className="w-full h-full flex items-center justify-center text-center text-white font-comic-neue text-2xl">
+        {/* Empty content for blank page */}
+      </div>
+    ),
+    image: dancingghosts
+  },
+  {
+    content: (
+      <div className="w-full h-full flex flex-col items-center justify-center text-center text-white font-comic-neue">
         <p className="text-2xl">The monsters start to jive!</p>
       </div>
     ),
     image: jiving,
   },
+   {
+    content: (
+      <div className="w-full h-full flex items-center justify-center text-center text-white font-comic-neue text-2xl">
+        {/* Empty content for blank page */}
+      </div>
+    ),
+    image: jiving2
+  },
   {
     content: (
-      <div className="page-content w-full h-full flex flex-col items-center justify-center text-center text-white">
+      <div className="w-full h-full flex flex-col items-center justify-center text-center text-white font-comic-neue">
         <p className="text-2xl">It's 6!</p>
         <p className="text-2xl">The goblins play a trick!</p>
       </div>
@@ -116,7 +179,15 @@ export const pages = [
   },
   {
     content: (
-      <div className="page-content w-full h-full flex flex-col items-center justify-center text-center text-white">
+      <div className="w-full h-full flex items-center justify-center text-center text-white font-comic-neue text-2xl">
+        {/* Empty content for blank page */}
+      </div>
+    ),
+    image: goblinsscary
+  },
+  {
+    content: (
+      <div className="w-full h-full flex flex-col items-center justify-center text-center text-white font-comic-neue">
         <p className="text-2xl">It's 7!</p>
         <p className="text-2xl">Thunder crashes from the Heavens!</p>
       </div>
@@ -125,16 +196,32 @@ export const pages = [
   },
   {
     content: (
-      <div className="page-content w-full h-full flex flex-col items-center justify-center text-center text-white">
+      <div className="w-full h-full flex items-center justify-center text-center text-white font-comic-neue text-2xl">
+        {/* Empty content for blank page */}
+      </div>
+    ),
+    image: storm
+  },
+  {
+    content: (
+      <div className="w-full h-full flex flex-col items-center justify-center text-center text-white font-comic-neue">
         <p className="text-2xl">The vampires cut the cobweb cake!</p>
         <p className="text-2xl">"Gooey red velvet, my favorite!"</p>
       </div>
     ),
     image: vampires,
   },
+   {
+    content: (
+      <div className="w-full h-full flex items-center justify-center text-center text-white font-comic-neue text-2xl">
+        {/* Empty content for blank page */}
+      </div>
+    ),
+    image: cake3
+  },
   {
     content: (
-      <div className="page-content w-full h-full flex flex-col items-center justify-center text-center text-white">
+      <div className="w-full h-full flex flex-col items-center justify-center text-center text-white font-comic-neue">
         <p className="text-2xl">It's 9!</p>
         <p className="text-2xl">The werewolves are ready to dine!</p>
         <p className="text-2xl">"Hello, 9.927 bug pizzas and 11.883 jugs of pumpkin juice please!"</p>
@@ -144,15 +231,31 @@ export const pages = [
   },
   {
     content: (
-      <div className="page-content w-full h-full flex flex-col items-center justify-center text-center text-white">
+      <div className="w-full h-full flex items-center justify-center text-center text-white font-comic-neue text-2xl">
+        {/* Empty content for blank page */}
+      </div>
+    ),
+    image: werewolves2
+  },
+  {
+    content: (
+      <div className="w-full h-full flex flex-col items-center justify-center text-center text-white font-comic-neue">
         <p className="text-2xl">The monsters want to dance again!</p>
       </div>
     ),
     image: dancing1,
   },
+   {
+    content: (
+      <div className="w-full h-full flex items-center justify-center text-center text-white font-comic-neue text-2xl">
+        {/* Empty content for blank page */}
+      </div>
+    ),
+    image: party
+  },
   {
     content: (
-      <div className="page-content w-full h-full flex flex-col items-center justify-center text-center text-white">
+      <div className="w-full h-full flex flex-col items-center justify-center text-center text-white font-comic-neue">
         <h1 className="text-4xl font-bold">HAPPY HALLOWEEN</h1>
       </div>
     ),
@@ -160,7 +263,15 @@ export const pages = [
   },
   {
     content: (
-      <div className="page-content w-full h-full flex flex-col items-center justify-center text-center text-white">
+      <div className="w-full h-full flex items-center justify-center text-center text-white font-comic-neue text-2xl">
+        {/* Empty content for blank page */}
+      </div>
+    ),
+    image: happy
+  },
+  {
+    content: (
+      <div className="w-full h-full flex flex-col items-center justify-center text-center text-white font-comic-neue">
         <p className="text-2xl">"Is anyone else getting sleepy?"</p>
       </div>
     ),
@@ -168,7 +279,7 @@ export const pages = [
   },
   {
     content: (
-      <div className="page-content w-full h-full flex flex-col items-center justify-center text-center text-white">
+      <div className="w-full h-full flex flex-col items-center justify-center text-center text-white font-comic-neue">
         <p className="text-2xl">It's the Afternoon!</p>
         <p className="text-2xl">The monsters fall asleep so soon!</p>
       </div>
@@ -177,24 +288,38 @@ export const pages = [
   },
   {
     content: (
-      <div className="page-content w-full h-full flex flex-col items-center justify-center text-center text-white">
+      <div className="w-full h-full flex flex-col items-center justify-center text-center text-white font-comic-neue">
         <p className="text-2xl">Goodnight Monsters!</p>
         <p className="text-3xl font-bold">Happy Halloween!</p>
       </div>
     ),
     image: sleepingMonsters,
   },
+  // Blank page before interactive story
   {
     content: (
-      <div className="page-content w-full h-full flex flex-col items-center justify-center text-center text-white">
-        <h1 className="text-3xl">Create Your Own Halloween Story!</h1>
-        <p className="mt-4 text-2xl">Write your own spooky tale below:</p>
-        <div className="mt-4 w-3/4 h-1/2 border-2 border-gray-400 flex flex-col justify-end p-4">
-          <p className="text-xl">Copyright 2024</p>
-          <p className="text-xl">ISBN: 9798339360506</p>
-        </div>
+      <div className="w-full h-full flex items-center justify-center text-center text-white font-comic-neue text-2xl">
+        {/* Empty content for blank page */}
       </div>
     ),
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: sleeping,
+  },
+  // Interactive "Make Your Own Story" page
+  {
+    content: (
+      <div className="w-full h-full flex flex-col items-center justify-start text-center text-white font-comic-neue p-6">
+       
+          <div className="mt-4">
+            <h1 className="text-3xl font-bold">A Spooky Celebration Awaits!</h1>
+            
+            <p className="text-xl">It’s Halloween night, and the monsters are ready to party! Join banshees, zombies, witches, and vampires as they dance, scream, and feast on gooey cobweb cake under the midnight moon. From jiving skeletons to sleepy werewolves, every monster brings their own magic to this frightfully fun bash.
+            Will you dare to join the Monster’s Halloween Party? Turn the pages to find out—and don’t forget to create your very own spooky tale at the end!
+            </p>
+            <p className="text-xl">Copyright 2024</p>
+            <p className="text-xl">ISBN: 9798339360506</p>
+          </div>
+        </div>
+    ),
+    image: bonus,
   },
 ];
