@@ -29,10 +29,10 @@ const Book = () => {
             minHeight={400}
             maxHeight={700}
             maxShadowOpacity={0.7}
-            showCover={true}
+            showCover={true} // Ensures the cover is treated as a single page
             mobileScrollSupport={false}
             flippingTime={1000}
-            usePortrait={true}
+            usePortrait={false} // Enables two-page view
             startPage={0}
             drawShadow={true}
             ref={bookRef}

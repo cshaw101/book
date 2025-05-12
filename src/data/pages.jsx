@@ -33,8 +33,9 @@ import sleeping from '../assets/illustrations/sleeping.png';
 export const pages = [
   {
     content: (
-      <div className="w-full h-full flex items-center justify-center text-center text-4xl font-annie-use-your-telescope text-gray-800">
-        By Page Hill
+      <div className="w-full h-full flex items-center justify-center text-center text-4xl font-annie-use-your-telescope text-gray-800 relative">
+        <h1 className="text-4xl">The Monster's Halloween Party</h1>
+        <p className="absolute bottom-4 right-4 italic text-2xl">By: Page Hill</p>
       </div>
     ),
     image: cover,
